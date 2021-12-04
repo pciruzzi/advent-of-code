@@ -1,0 +1,23 @@
+{
+  "name": "advent-of-code-2021",
+  "version": "1.0.0",
+  "description": "Advent of Code 2021 solutions",
+  "main": "N/A",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pciruzzi/advent-of-code.git"
+  },
+  "author": "@pciruzzi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pciruzzi/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/pciruzzi/advent-of-code#readme",
+  "dependencies": {
+    "tsc": "2.0.3",
+    "typescript": "4.5.2"
+  }
+}
