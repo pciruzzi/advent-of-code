@@ -5,8 +5,8 @@ const isArrayCompleted = (positions: BoardPosition[]): boolean =>
 
 export const fillAndCheckBoard = (board: Board, bingoNumber: BingoNumber) => {
   let sumOfNumbers = 0;
-  let columnWithNumber = -1;
-  let rowWithNumber = -1;
+  let columnWithNumber: number | undefined;
+  let rowWithNumber: number | undefined;
 
   board.forEach((row, rowIndex) => {
     row.forEach((position, columnIndex) => {
@@ -22,16 +22,15 @@ export const fillAndCheckBoard = (board: Board, bingoNumber: BingoNumber) => {
   });
 
   // We check if the row is complete
-  if (rowWithNumber !== -1 && isArrayCompleted(board[rowWithNumber])) {
+  // We can't check `rowWithNumber && ...` because it can be 0
+  if (rowWithNumber !== undefined && isArrayCompleted(board[rowWithNumber])) {
     console.log('Row completed', board);
     return sumOfNumbers;
   }
 
   // We check if the column is complete
-  if (columnWithNumber !== -1 && isArrayCompleted(board.map((row) => row[columnWithNumber!]))) {
+  if (columnWithNumber !== undefined && isArrayCompleted(board.map((row) => row[columnWithNumber!]))) {
     console.log('Column completed', board);
     return sumOfNumbers;
   }
-
-  return -1;
 };

@@ -3,8 +3,8 @@ import { fillAndCheckBoard } from './utils';
 
 export const solve = (numbers: BingoNumber[], boards: Board[]) => {
   const wonBoards: number[] = [];
-  let bingoNumber = -1;
-  let unmarkedNumbersSum = -1;
+  let bingoNumber: number | undefined;
+  let unmarkedNumbersSum: number | undefined;
 
   numbers.forEach((number, index) => {
     boards.forEach((board, boardIndex) => {
@@ -14,7 +14,7 @@ export const solve = (numbers: BingoNumber[], boards: Board[]) => {
       }
 
       const boardResult = fillAndCheckBoard(board, number);
-      if (boardResult !== -1) {
+      if (boardResult) {
         // The board won
         wonBoards.push(boardIndex);
 
