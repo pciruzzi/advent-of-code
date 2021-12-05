@@ -1,4 +1,4 @@
-## Day 3: Binary diagnostic
+## [Day 3: Binary diagnostic](https://adventofcode.com/2021/day/3)
 
 ### Part 1
 
