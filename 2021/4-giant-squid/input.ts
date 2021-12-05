@@ -17,10 +17,7 @@ const boards: Board[] = rawBoards
         rawRow
           .split(' ')
           .filter((possibleNumber) => possibleNumber && possibleNumber !== '')
-          // When I first read, I thought we had to count the number of *checked* numbers not the missing ones.
-          // In that case, we wouldn't need a `found` or anything like that, we could just put a `null` on that
-          // position and that's it
-          .map((number) => ({ number: parseInt(number, 10), found: false })),
+          .map(Number),
       ),
   );
 

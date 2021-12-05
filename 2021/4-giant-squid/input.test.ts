@@ -9,41 +9,11 @@ describe('Day 4: Giant squid', () => {
   it('parses the boards correctly', () => {
     expect(boards.length).toEqual(100);
     expect(boards[1]).toEqual([
-      [
-        { number: 0, found: false },
-        { number: 66, found: false },
-        { number: 5, found: false },
-        { number: 51, found: false },
-        { number: 8, found: false },
-      ],
-      [
-        { number: 45, found: false },
-        { number: 57, found: false },
-        { number: 31, found: false },
-        { number: 3, found: false },
-        { number: 62, found: false },
-      ],
-      [
-        { number: 7, found: false },
-        { number: 60, found: false },
-        { number: 40, found: false },
-        { number: 29, found: false },
-        { number: 90, found: false },
-      ],
-      [
-        { number: 80, found: false },
-        { number: 19, found: false },
-        { number: 47, found: false },
-        { number: 86, found: false },
-        { number: 81, found: false },
-      ],
-      [
-        { number: 95, found: false },
-        { number: 69, found: false },
-        { number: 68, found: false },
-        { number: 53, found: false },
-        { number: 93, found: false },
-      ],
+      [0, 66, 5, 51, 8],
+      [45, 57, 31, 3, 62],
+      [7, 60, 40, 29, 90],
+      [80, 19, 47, 86, 81],
+      [95, 69, 68, 53, 93],
     ]);
     boards.map((board) => {
       expect(board.length).toEqual(5);
