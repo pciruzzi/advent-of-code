@@ -17,16 +17,17 @@ export const solve = (numbers: BingoNumber[], boards: Board[]) => {
       if (boardResult !== -1) {
         // The board won
         wonBoards.push(boardIndex);
-      }
-      if (wonBoards.length === boards.length) {
-        // The last board won
-        bingoNumber = number;
-        unmarkedNumbersSum = boardResult;
-        console.log(
-          `BINGO! The last board won when ${number} was out (iteration ${index}), in board ${boardIndex}: ${
-            boardResult * number
-          }`,
-        );
+
+        if (wonBoards.length === boards.length) {
+          // The last board won
+          bingoNumber = number;
+          unmarkedNumbersSum = boardResult;
+          console.log(
+            `BINGO! The last board won when ${number} was out (iteration ${index}), in board ${boardIndex}: ${
+              boardResult * number
+            }`,
+          );
+        }
       }
     });
   });

@@ -1,4 +1,7 @@
-import { BingoNumber, Board } from './types';
+import { BingoNumber, Board, BoardPosition } from './types';
+
+const isArrayCompleted = (positions: BoardPosition[]): boolean =>
+  positions.reduce((isCompleted: boolean, position) => isCompleted && position === null, true);
 
 export const fillAndCheckBoard = (board: Board, bingoNumber: BingoNumber) => {
   let sumOfNumbers = 0;
@@ -18,28 +21,16 @@ export const fillAndCheckBoard = (board: Board, bingoNumber: BingoNumber) => {
     });
   });
 
-  // We check if the column is complete
-  if (columnWithNumber !== -1) {
-    let isColumnCompleted = true;
-    for (let i = 0; i < board.length; i++) {
-      isColumnCompleted = isColumnCompleted && board[i][columnWithNumber] === null;
-    }
-    if (isColumnCompleted) {
-      console.log('Column completed', board);
-      return sumOfNumbers;
-    }
+  // We check if the row is complete
+  if (rowWithNumber !== -1 && isArrayCompleted(board[rowWithNumber])) {
+    console.log('Row completed', board);
+    return sumOfNumbers;
   }
 
-  // We check if the row is complete
-  if (rowWithNumber !== -1) {
-    let isRowCompleted = true;
-    for (let i = 0; i < board[rowWithNumber].length; i++) {
-      isRowCompleted = isRowCompleted && board[rowWithNumber][i] === null;
-    }
-    if (isRowCompleted) {
-      console.log('Row completed', board);
-      return sumOfNumbers;
-    }
+  // We check if the column is complete
+  if (columnWithNumber !== -1 && isArrayCompleted(board.map((row) => row[columnWithNumber!]))) {
+    console.log('Column completed', board);
+    return sumOfNumbers;
   }
 
   return -1;
