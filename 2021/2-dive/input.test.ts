@@ -1,5 +1,5 @@
 import { Instruction } from './types';
-import { commands } from './utils';
+import { commands } from './input';
 
 describe('Day 1: Sonar sweep', () => {
   it('parses the file correctly', () => {

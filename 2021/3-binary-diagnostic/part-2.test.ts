@@ -1,6 +1,6 @@
 import { solve } from './part-2';
 import { Binary } from './types';
-import { binaries } from './utils';
+import { binaries } from './input';
 
 describe('Day 3: Binary diagnostic', () => {
   it('Part 2 - Example', () => {

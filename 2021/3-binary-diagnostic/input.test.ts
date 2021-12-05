@@ -1,4 +1,4 @@
-import { binaries } from './utils';
+import { binaries } from './input';
 
 describe('Day 3: Binary diagnostic', () => {
   it('parses the file correctly', () => {

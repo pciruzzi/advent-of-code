@@ -1,4 +1,4 @@
-import { measurements } from './utils';
+import { measurements } from './input';
 
 describe('Day 1: Sonar sweep', () => {
   it('parses the file correctly', () => {

@@ -1,6 +1,6 @@
 import { solve } from './part-1';
 import { Command, Instruction } from './types';
-import { commands } from './utils';
+import { commands } from './input';
 
 describe('Day 2: Dive!', () => {
   it('Part 1 - Example', () => {

@@ -1,6 +1,6 @@
 import { solve } from './part-1';
 import { Measurement } from './types';
-import { measurements } from './utils';
+import { measurements } from './input';
 
 describe('Day 1: Sonar sweep', () => {
   it('Part 1 - Example', () => {
