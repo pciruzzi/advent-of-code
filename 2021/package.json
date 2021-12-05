@@ -8,7 +8,8 @@
     "format": "eslint --fix --ext .js,.ts,.jsx,.tsx .",
     "lint": "npm run lint:tsc && npm run lint:eslint",
     "lint:tsc": "tsc --noEmit",
-    "lint:eslint": "eslint --ext .js,.ts,.jsx,.tsx ."
+    "lint:eslint": "eslint --ext .js,.ts,.jsx,.tsx .",
+    "solve-puzzle": "ts-node"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/pciruzzi/advent-of-code#readme",
   "dependencies": {
+    "@types/node": "16.11.11",
+    "ts-node": "10.4.0",
     "tsc": "2.0.3",
     "typescript": "4.5.2"
   },
