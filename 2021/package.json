@@ -4,7 +4,7 @@
   "description": "Advent of Code 2021 solutions",
   "main": "N/A",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test jest --detectOpenHandles --colors",
     "format": "eslint --fix --ext .js,.ts,.jsx,.tsx .",
     "lint": "npm run lint:tsc && npm run lint:eslint",
     "lint:tsc": "tsc --noEmit",
@@ -28,13 +28,17 @@
     "typescript": "4.5.2"
   },
   "devDependencies": {
+    "@types/jest": "27.0.3",
     "@typescript-eslint/eslint-plugin": "5.5.0",
     "@typescript-eslint/parser": "5.5.0",
     "eslint": "8.4.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jest": "25.3.0",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "4.0.0"
+    "eslint-plugin-prettier": "4.0.0",
+    "jest": "27.4.3",
+    "ts-jest": "27.1.0"
   }
 }
