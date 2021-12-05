@@ -7,5 +7,11 @@ This folder contains all the solutions to the [Advent of Code challenge, 2021 ed
 To run the solving a one puzzle it's a matter of just using the following script:
 
 ```sh
-npm run solve-puzzle -- <any-file-you-want>
+npm run solve-puzzle -- <any-puzzle-you-want>
+```
+
+For example:
+
+```sh
+npm run solve-puzzle -- 1-sonnar-sweep
 ```
