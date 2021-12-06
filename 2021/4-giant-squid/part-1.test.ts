@@ -29,11 +29,11 @@ describe('Day 4: Giant squid', () => {
     ];
     const result = solve(numbers, boards);
     expect(result).toEqual({ unmarkedNumbersSum: 188, bingoNumber: 24 });
-    expect(result.unmarkedNumbersSum * result.bingoNumber).toEqual(4512);
+    expect(result.unmarkedNumbersSum! * result.bingoNumber!).toEqual(4512);
   });
   it('Part 1', () => {
     const result = solve(numbers, boards);
     expect(result).toEqual({ unmarkedNumbersSum: 1068, bingoNumber: 10 });
-    expect(result.unmarkedNumbersSum * result.bingoNumber).toEqual(10680);
+    expect(result.unmarkedNumbersSum! * result.bingoNumber!).toEqual(10680);
   });
 });
